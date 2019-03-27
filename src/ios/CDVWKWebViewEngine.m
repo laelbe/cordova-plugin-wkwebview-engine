@@ -282,6 +282,10 @@ static void * KVOContext = &KVOContext;
         [wkWebView.scrollView setDecelerationRate:UIScrollViewDecelerationRateFast];
     }
 
+    // set background color to BLACK
+    wkWebView.backgroundColor = UIColor(red:0.11, green:0.13, blue:0.19, alpha:1);
+    wkWebView.scrollView.backgroundColor = UIColor(red:0.11, green:0.13, blue:0.19, alpha:1);
+
     wkWebView.allowsBackForwardNavigationGestures = [settings cordovaBoolSettingForKey:@"AllowBackForwardNavigationGestures" defaultValue:NO];
     wkWebView.allowsLinkPreview = [settings cordovaBoolSettingForKey:@"Allow3DTouchLinkPreview" defaultValue:YES];
 }
